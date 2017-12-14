@@ -9,6 +9,7 @@ public class Decrypt{
     public static void main(String[] args){
         String filePath = args[0];
         String filePassword = args[1];
+        filePassword = filePassword + '@';
         String targetFileName="";
         String dummy = "_ced";
         boolean found = false;
