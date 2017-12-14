@@ -37,6 +37,7 @@ public class Encrypt{
         }
         int data;
         int i=0;
+        System.out.println("Encrypting...\n");
         try{
             while((data = fis.read() )!=-1){
             data = data + (int)filePassword.charAt(i);
