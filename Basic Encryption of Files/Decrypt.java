@@ -5,12 +5,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 
-public class Decrypt{
+public class Encrypt{
     public static void main(String[] args){
         String filePath = args[0];
         String filePassword = args[1];
         String targetFileName="";
-        String dummy = "_ced";
+        String dummy = "_cne";
         boolean found = false;
         FileInputStream fis = null;
         FileOutputStream fout = null;
@@ -37,9 +37,10 @@ public class Decrypt{
         }
         int data;
         int i=0;
+        System.out.println("Encrypting...\n");
         try{
             while((data = fis.read() )!=-1){
-            data = data - (int)filePassword.charAt(i);
+            data = data + (int)filePassword.charAt(i);
             
                 fout.write((char)data);
             
