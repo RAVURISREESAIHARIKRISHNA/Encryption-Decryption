@@ -23,6 +23,8 @@ public class Encrypt{
             targetFileName = targetFileName + Character.toString(filePath.charAt(i));
         }
         targetFileName = new StringBuilder(targetFileName).reverse().toString();
+        File fileDelete = new File(targetFileName);
+        fileDelete.delete();
         try{
             fis = new FileInputStream(filePath);
         }catch(IOException e){
