@@ -9,7 +9,7 @@ $ java Encrypt ValidFile.type YourPassword
 
 ```sh
 $ javac Decrypt.java
-$ java Decrypt ValidFile.type YourPassword
+$ java Decrypt EncryptedFile.type YourPassword
 ```
 
 ## If you provide Correct Password...Correct content will be delivered,else some garbage will be generated
