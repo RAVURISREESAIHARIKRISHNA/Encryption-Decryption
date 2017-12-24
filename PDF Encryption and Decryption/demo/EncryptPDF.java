@@ -15,11 +15,11 @@ public class EncryptPDF {
 		AccessPermission permission = new AccessPermission();
 		permission.setCanPrint(true);
 		
-		StandardProtectionPolicy spp = new StandardProtectionPolicy(args[1],args[2],permission);
+		StandardProtectionPolicy spp = new StandardProtectionPolicy(args[2],args[3],permission);
 		spp.setEncryptionKeyLength(256);
 		spp.setPermissions(permission);
 		document.protect(spp);
-		document.save("G:\\\\Java Created\\\\myPdf_1_encrypted.pdf");
+		document.save(args[1]);
 		document.close();
 		System.out.println("Encrypted....");
 	}
