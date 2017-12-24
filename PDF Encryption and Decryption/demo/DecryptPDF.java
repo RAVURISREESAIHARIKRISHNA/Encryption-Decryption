@@ -10,7 +10,7 @@ import org.apache.pdfbox.pdmodel.encryption.StandardProtectionPolicy;
 public class DecryptPDF {
 	public static void main(String[] args) throws IOException{
 		File my_file = new File(args[0]);
-		PDDocument document = PDDocument.load(my_file,args[1]);
+		PDDocument document = PDDocument.load(my_file,args[2]);
 		AccessPermission permission = new AccessPermission();
 		permission.setCanPrint(false);
 		
@@ -18,7 +18,7 @@ public class DecryptPDF {
 		spp.setEncryptionKeyLength(256);
 		spp.setPermissions(permission);
 		document.protect(spp);
-		document.save("G:\\\\Java Created\\\\myPdf_1_dencrypt.pdf");
+		document.save(args[1]);
 		document.close();
 		System.out.println("Decrypted....");
 	}
