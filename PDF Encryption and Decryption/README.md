@@ -2,14 +2,14 @@
 
 ```sh
 $ javac EncryptPDF.java
-$ java EncryptPDF File.pdf PDFOwnerPASSWORD PDFUserPASSWORD
+$ java EncryptPDF File.pdf EncryptedFilePDFLocation.pdf PDFOwnerPASSWORD PDFUserPASSWORD
 ```
 
 # Decrypting PDF
 
 ```sh
 $ javac DecryptPDF.java
-$ java DecryptPDF File.pdf PDFOwnerPassword
+$ java DecryptPDF File.pdf DecryptedFilePDFLocation.pdf PDFOwnerPassword
 ```
 
 ## This uses Standard 256-bit Encryption
